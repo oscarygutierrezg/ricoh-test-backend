@@ -1,6 +1,7 @@
 app:
  ms:
   nobel:
+   min-year: 1901
    url: http://localhost:9090
 server:
  servlet:

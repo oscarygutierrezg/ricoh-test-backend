@@ -2,6 +2,7 @@ package com.ricoh.test.controller;
 
 import com.ricoh.test.dto.external.nobel.NobelPrizeDto;
 import com.ricoh.test.dto.vacante.VacanteDto;
+import com.ricoh.test.model.enums.NobelCategory;
 import com.ricoh.test.service.NobelService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
@@ -30,7 +31,7 @@ public class NobelController {
 
 	@GetMapping(value = "/{category}/{yearFrom}/{yearTo}")
 	public ResponseEntity<List<NobelPrizeDto>>  getNobelInfo(
-			@PathVariable(value = "category") String category,
+			@PathVariable(value = "category") NobelCategory category,
 			@PathVariable(value = "yearFrom") int yearFrom,
 			@PathVariable(value = "yearTo") int yearTo
 	) {

@@ -1,1 +1,2878 @@
-{"openapi":"3.0.1","info":{"title":"Ricoh API","version":"v1"},"servers":[{"url":"http://localhost:8080/ricoh","description":"Generated server url"}],"security":[{"bearerAuthentication":[]}],"paths":{"/v1/vacante/{uuid}":{"get":{"tags":["vacantes"],"operationId":"showVacante","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/VacanteDto"}}}}}},"put":{"tags":["vacantes"],"operationId":"updateVacante","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/VacanteRequest"}}},"required":true},"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/VacanteDto"}}}}}},"delete":{"tags":["vacantes"],"operationId":"deleteVacante","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/VacanteDto"}}}}}}},"/v1/usuario/{uuid}":{"get":{"tags":["usuarios"],"operationId":"showUsuario","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/UsuarioDto"}}}}}},"put":{"tags":["usuarios"],"operationId":"updateUsuario","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/UsuarioRequest"}}},"required":true},"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/UsuarioDto"}}}}}},"delete":{"tags":["usuarios"],"operationId":"deleteUsuario","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/UsuarioDto"}}}}}}},"/v1/perfil/{uuid}":{"get":{"tags":["perfiles"],"operationId":"showPerfil","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/PerfilDto"}}}}}},"put":{"tags":["perfiles"],"operationId":"updatePerfil","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/PerfilRequest"}}},"required":true},"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/PerfilDto"}}}}}},"delete":{"tags":["perfiles"],"operationId":"deletePerfil","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/PerfilDto"}}}}}}},"/v1/inscripcion/{uuid}":{"get":{"tags":["inscripciones"],"operationId":"showInscripcion","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/InscripcionDto"}}}}}},"put":{"tags":["inscripciones"],"operationId":"updateInscripcion","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/InscripcionRequest"}}},"required":true},"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/InscripcionDto"}}}}}},"delete":{"tags":["inscripciones"],"operationId":"deleteInscripcion","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/InscripcionDto"}}}}}}},"/v1/categoria/{uuid}":{"get":{"tags":["categorias"],"operationId":"showCategoria","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/CategoriaDto"}}}}}},"put":{"tags":["categorias"],"operationId":"updateCategoria","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/CategoriaRequest"}}},"required":true},"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/CategoriaDto"}}}}}},"delete":{"tags":["categorias"],"operationId":"deleteCategoria","parameters":[{"name":"uuid","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/CategoriaDto"}}}}}}},"/v1/vacante":{"get":{"tags":["vacantes"],"operationId":"getAllVacantes","parameters":[{"name":"destacado","in":"query","required":false,"schema":{"type":"string"}},{"name":"nombre","in":"query","required":false,"schema":{"type":"string"}},{"name":"descripcion","in":"query","required":false,"schema":{"type":"string"}},{"name":"detalles","in":"query","required":false,"schema":{"type":"string"}},{"name":"estatus","in":"query","required":false,"schema":{"type":"string","enum":["CREATED","PROCESED","DELETED"]}},{"name":"page","in":"query","required":false,"schema":{"type":"integer","format":"int32","default":0}},{"name":"size","in":"query","required":false,"schema":{"type":"integer","format":"int32","default":20}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/PageVacanteDto"}}}}}},"post":{"tags":["vacantes"],"operationId":"createVacante","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/VacanteRequest"}}},"required":true},"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/VacanteDto"}}}}}}},"/v1/security/register":{"post":{"tags":["security-controller"],"operationId":"saveUser","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/UsuarioRequest"}}},"required":true},"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/UsuarioDto"}}}}}}},"/v1/security/authenticate":{"post":{"tags":["security-controller"],"operationId":"createAuthenticationToken","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/UsuarioRequest"}}},"required":true},"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/JwtResponse"}}}}}}},"/v1/perfil":{"post":{"tags":["perfiles"],"operationId":"createPerfil","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/PerfilRequest"}}},"required":true},"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/PerfilDto"}}}}}}},"/v1/inscripcion":{"post":{"tags":["inscripciones"],"operationId":"createInscripcion","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/InscripcionRequest"}}},"required":true},"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/InscripcionDto"}}}}}}},"/v1/categoria":{"post":{"tags":["categorias"],"operationId":"createCategoria","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/CategoriaRequest"}}},"required":true},"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/CategoriaDto"}}}}}}},"/v1/vacante/all":{"get":{"tags":["vacantes"],"operationId":"getAllVacantes_1","responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/VacanteDto"}}}}}}}},"/v1/usuario":{"get":{"tags":["usuarios"],"operationId":"getAllUsuarios","parameters":[{"name":"username","in":"query","required":false,"schema":{"type":"string"}},{"name":"nombre","in":"query","required":false,"schema":{"type":"string"}},{"name":"email","in":"query","required":false,"schema":{"type":"string"}},{"name":"estatus","in":"query","required":false,"schema":{"type":"string","enum":["CREATED","PROCESED","DELETED"]}},{"name":"page","in":"query","required":false,"schema":{"type":"integer","format":"int32","default":0}},{"name":"size","in":"query","required":false,"schema":{"type":"integer","format":"int32","default":20}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"$ref":"#/components/schemas/PageUsuarioDto"}}}}}}},"/v1/usuario/all":{"get":{"tags":["usuarios"],"operationId":"getAllUsuarios_1","responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/UsuarioDto"}}}}}}}},"/v1/perfil/all":{"get":{"tags":["perfiles"],"operationId":"getAllPerfils","responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/PerfilDto"}}}}}}}},"/v1/inscripcion/vacantes/{usuarioId}":{"get":{"tags":["inscripciones"],"operationId":"getVacantes","parameters":[{"name":"usuarioId","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/VacanteDto"}}}}}}}},"/v1/inscripcion/usuarios/{vacanteId}":{"get":{"tags":["inscripciones"],"operationId":"getUsuarios","parameters":[{"name":"vacanteId","in":"path","required":true,"schema":{"type":"string","format":"uuid"}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/UsuarioDto"}}}}}}}},"/v1/inscripcion/all":{"get":{"tags":["inscripciones"],"operationId":"getAllInscripcions","responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/InscripcionDto"}}}}}}}},"/v1/categoria/all":{"get":{"tags":["categorias"],"operationId":"getAllCategorias","responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/CategoriaDto"}}}}}}}},"/external/v1/nobel/{category}/{year}":{"get":{"tags":["nobel"],"operationId":"getNobelInfo","parameters":[{"name":"category","in":"path","required":true,"schema":{"type":"string"}},{"name":"year","in":"path","required":true,"schema":{"type":"integer","format":"int32"}}],"responses":{"400":{"description":"Bad Request","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"422":{"description":"Unprocessable Entity","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"404":{"description":"Not Found","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"500":{"description":"Internal Server Error","content":{"*/*":{"schema":{"$ref":"#/components/schemas/ApiResponseErrorDto"}}}},"200":{"description":"OK","content":{"*/*":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/NobelPrizeDto"}}}}}}}}},"components":{"schemas":{"ApiResponseErrorDto":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"errors":{"type":"array","items":{"type":"string"}}}},"VacanteRequest":{"required":["descripcion","destacado","detalles","fecha","imagen","nombre"],"type":"object","properties":{"destacado":{"maxLength":15,"minLength":1,"type":"string"},"nombre":{"maxLength":15,"minLength":1,"type":"string"},"descripcion":{"maxLength":15,"minLength":1,"type":"string"},"fecha":{"type":"string","format":"date-time"},"imagen":{"maxLength":500,"minLength":10,"type":"string"},"detalles":{"maxLength":50,"minLength":10,"type":"string"},"categoriaId":{"type":"string","format":"uuid"},"estatus":{"type":"string","enum":["CREATED","PROCESED","DELETED"]}}},"CategoriaDto":{"type":"object","properties":{"id":{"type":"string","format":"uuid"},"nombre":{"type":"string"},"descripcion":{"type":"string"}}},"VacanteDto":{"type":"object","properties":{"id":{"type":"string","format":"uuid"},"destacado":{"type":"string"},"nombre":{"type":"string"},"descripcion":{"type":"string"},"fecha":{"type":"string","format":"date-time"},"imagen":{"type":"string"},"detalles":{"type":"string"},"estatus":{"type":"string","enum":["CREATED","PROCESED","DELETED"]},"categoria":{"$ref":"#/components/schemas/CategoriaDto"}}},"UsuarioRequest":{"required":["email","nombre","password","username"],"type":"object","properties":{"email":{"type":"string"},"password":{"maxLength":20,"minLength":6,"type":"string"},"nombre":{"maxLength":15,"minLength":1,"type":"string"},"username":{"maxLength":50,"minLength":1,"type":"string"},"estatus":{"type":"string","enum":["CREATED","PROCESED","DELETED"]}}},"UsuarioDto":{"type":"object","properties":{"id":{"type":"string","format":"uuid"},"email":{"type":"string"},"username":{"type":"string"},"nombre":{"type":"string"},"estatus":{"type":"string","enum":["CREATED","PROCESED","DELETED"]},"fechaRegistro":{"type":"string","format":"date-time"}}},"PerfilRequest":{"required":["perfil"],"type":"object","properties":{"perfil":{"maxLength":15,"minLength":1,"type":"string"}}},"PerfilDto":{"type":"object","properties":{"id":{"type":"string","format":"uuid"},"perfil":{"type":"string"}}},"InscripcionRequest":{"required":["fechaInscripcion","usuarioId","vacanteId"],"type":"object","properties":{"vacanteId":{"type":"string","format":"uuid"},"usuarioId":{"type":"string","format":"uuid"},"fechaInscripcion":{"type":"string","format":"date-time"}}},"InscripcionDto":{"type":"object","properties":{"id":{"type":"string","format":"uuid"},"vacante":{"$ref":"#/components/schemas/VacanteDto"},"usuario":{"$ref":"#/components/schemas/UsuarioDto"},"fechaInscripcion":{"type":"string","format":"date-time"}}},"CategoriaRequest":{"required":["descripcion","nombre"],"type":"object","properties":{"nombre":{"maxLength":15,"minLength":1,"type":"string"},"descripcion":{"maxLength":50,"minLength":10,"type":"string"}}},"JwtResponse":{"type":"object","properties":{"jwttoken":{"type":"string"}}},"PageVacanteDto":{"type":"object","properties":{"totalPages":{"type":"integer","format":"int32"},"totalElements":{"type":"integer","format":"int64"},"size":{"type":"integer","format":"int32"},"content":{"type":"array","items":{"$ref":"#/components/schemas/VacanteDto"}},"number":{"type":"integer","format":"int32"},"sort":{"$ref":"#/components/schemas/SortObject"},"pageable":{"$ref":"#/components/schemas/PageableObject"},"numberOfElements":{"type":"integer","format":"int32"},"first":{"type":"boolean"},"last":{"type":"boolean"},"empty":{"type":"boolean"}}},"PageableObject":{"type":"object","properties":{"offset":{"type":"integer","format":"int64"},"sort":{"$ref":"#/components/schemas/SortObject"},"paged":{"type":"boolean"},"unpaged":{"type":"boolean"},"pageNumber":{"type":"integer","format":"int32"},"pageSize":{"type":"integer","format":"int32"}}},"SortObject":{"type":"object","properties":{"empty":{"type":"boolean"},"sorted":{"type":"boolean"},"unsorted":{"type":"boolean"}}},"PageUsuarioDto":{"type":"object","properties":{"totalPages":{"type":"integer","format":"int32"},"totalElements":{"type":"integer","format":"int64"},"size":{"type":"integer","format":"int32"},"content":{"type":"array","items":{"$ref":"#/components/schemas/UsuarioDto"}},"number":{"type":"integer","format":"int32"},"sort":{"$ref":"#/components/schemas/SortObject"},"pageable":{"$ref":"#/components/schemas/PageableObject"},"numberOfElements":{"type":"integer","format":"int32"},"first":{"type":"boolean"},"last":{"type":"boolean"},"empty":{"type":"boolean"}}},"Languages":{"type":"object","properties":{"en":{"type":"string"},"se":{"type":"string"},"no":{"type":"string"}}},"Laureate":{"type":"object","properties":{"id":{"type":"string"},"knownName":{"$ref":"#/components/schemas/Languages"},"fullName":{"$ref":"#/components/schemas/Languages"},"portion":{"type":"string"},"sortOrder":{"type":"string"},"motivation":{"$ref":"#/components/schemas/Languages"},"links":{"$ref":"#/components/schemas/Links"}}},"Links":{"type":"object","properties":{"rel":{"type":"string"},"href":{"type":"string"},"action":{"type":"string"},"types":{"type":"string"}}},"Meta":{"type":"object","properties":{"terms":{"type":"string"},"license":{"type":"string"},"disclaimer":{"type":"string"}}},"NobelPrizeDto":{"type":"object","properties":{"awardYear":{"type":"string"},"category":{"$ref":"#/components/schemas/Languages"},"categoryFullName":{"$ref":"#/components/schemas/Languages"},"prizeAmount":{"type":"integer","format":"int32"},"prizeAmountAdjusted":{"type":"integer","format":"int32"},"links":{"$ref":"#/components/schemas/Links"},"laureates":{"type":"array","items":{"$ref":"#/components/schemas/Laureate"}},"meta":{"$ref":"#/components/schemas/Meta"},"dateAwarded":{"type":"string"}}}},"securitySchemes":{"bearerAuthentication":{"type":"http","scheme":"bearer","bearerFormat":"JWT"}}}}
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Ricoh API",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080/ricoh",
+      "description": "Generated server url"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuthentication": []
+    }
+  ],
+  "paths": {
+    "/v1/vacante/{uuid}": {
+      "get": {
+        "tags": [
+          "vacantes"
+        ],
+        "operationId": "showVacante",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/VacanteDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "vacantes"
+        ],
+        "operationId": "updateVacante",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VacanteRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/VacanteDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "vacantes"
+        ],
+        "operationId": "deleteVacante",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/VacanteDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/usuario/{uuid}": {
+      "get": {
+        "tags": [
+          "usuarios"
+        ],
+        "operationId": "showUsuario",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsuarioDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "usuarios"
+        ],
+        "operationId": "updateUsuario",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsuarioDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "usuarios"
+        ],
+        "operationId": "deleteUsuario",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsuarioDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/perfil/{uuid}": {
+      "get": {
+        "tags": [
+          "perfiles"
+        ],
+        "operationId": "showPerfil",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/PerfilDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "perfiles"
+        ],
+        "operationId": "updatePerfil",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PerfilRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/PerfilDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "perfiles"
+        ],
+        "operationId": "deletePerfil",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/PerfilDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/inscripcion/{uuid}": {
+      "get": {
+        "tags": [
+          "inscripciones"
+        ],
+        "operationId": "showInscripcion",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/InscripcionDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "inscripciones"
+        ],
+        "operationId": "updateInscripcion",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InscripcionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/InscripcionDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "inscripciones"
+        ],
+        "operationId": "deleteInscripcion",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/InscripcionDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/categoria/{uuid}": {
+      "get": {
+        "tags": [
+          "categorias"
+        ],
+        "operationId": "showCategoria",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "categorias"
+        ],
+        "operationId": "updateCategoria",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "categorias"
+        ],
+        "operationId": "deleteCategoria",
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/vacante": {
+      "get": {
+        "tags": [
+          "vacantes"
+        ],
+        "operationId": "getAllVacantes",
+        "parameters": [
+          {
+            "name": "destacado",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nombre",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "descripcion",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "detalles",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "estatus",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "CREATED",
+                "PROCESED",
+                "DELETED"
+              ]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 20
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/PageVacanteDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "vacantes"
+        ],
+        "operationId": "createVacante",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VacanteRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/VacanteDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/security/register": {
+      "post": {
+        "tags": [
+          "security-controller"
+        ],
+        "operationId": "saveUser",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsuarioDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/security/authenticate": {
+      "post": {
+        "tags": [
+          "security-controller"
+        ],
+        "operationId": "createAuthenticationToken",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/JwtResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/perfil": {
+      "post": {
+        "tags": [
+          "perfiles"
+        ],
+        "operationId": "createPerfil",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PerfilRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/PerfilDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/inscripcion": {
+      "post": {
+        "tags": [
+          "inscripciones"
+        ],
+        "operationId": "createInscripcion",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InscripcionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/InscripcionDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/categoria": {
+      "post": {
+        "tags": [
+          "categorias"
+        ],
+        "operationId": "createCategoria",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CategoriaRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/CategoriaDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/vacante/all": {
+      "get": {
+        "tags": [
+          "vacantes"
+        ],
+        "operationId": "getAllVacantes_1",
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VacanteDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/usuario": {
+      "get": {
+        "tags": [
+          "usuarios"
+        ],
+        "operationId": "getAllUsuarios",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "nombre",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "email",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "estatus",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "CREATED",
+                "PROCESED",
+                "DELETED"
+              ]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 20
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/PageUsuarioDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/usuario/all": {
+      "get": {
+        "tags": [
+          "usuarios"
+        ],
+        "operationId": "getAllUsuarios_1",
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UsuarioDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/perfil/all": {
+      "get": {
+        "tags": [
+          "perfiles"
+        ],
+        "operationId": "getAllPerfils",
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PerfilDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/inscripcion/vacantes/{usuarioId}": {
+      "get": {
+        "tags": [
+          "inscripciones"
+        ],
+        "operationId": "getVacantes",
+        "parameters": [
+          {
+            "name": "usuarioId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/VacanteDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/inscripcion/usuarios/{vacanteId}": {
+      "get": {
+        "tags": [
+          "inscripciones"
+        ],
+        "operationId": "getUsuarios",
+        "parameters": [
+          {
+            "name": "vacanteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UsuarioDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/inscripcion/all": {
+      "get": {
+        "tags": [
+          "inscripciones"
+        ],
+        "operationId": "getAllInscripcions",
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InscripcionDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/categoria/all": {
+      "get": {
+        "tags": [
+          "categorias"
+        ],
+        "operationId": "getAllCategorias",
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CategoriaDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/external/v1/nobel/{category}/{yearFrom}/{yearTo}": {
+      "get": {
+        "tags": [
+          "nobel"
+        ],
+        "operationId": "getNobelInfo",
+        "parameters": [
+          {
+            "name": "category",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "che",
+                "eco",
+                "lit",
+                "pea",
+                "phy",
+                "med"
+              ]
+            }
+          },
+          {
+            "name": "yearFrom",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "yearTo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponseErrorDto"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NobelPrizeDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiResponseErrorDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "VacanteRequest": {
+        "required": [
+          "descripcion",
+          "destacado",
+          "detalles",
+          "fecha",
+          "imagen",
+          "nombre"
+        ],
+        "type": "object",
+        "properties": {
+          "destacado": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "nombre": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "descripcion": {
+            "maxLength": 15,
+            "minLength": 1,
+            "type": "string"
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "imagen": {
+            "maxLength": 500,
+            "minLength": 10,
+            "type": "string"
+          },
+          "detalles": {
+            "maxLength": 50,
+            "minLength": 10,
+            "type": "string"
+          },
+          "categoriaId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "estatus": {
+            "type": "string",
+            "enum": [
+              "CREATED",
+              "PROCESED",
+              "DELETED"
+            ]
+          }
+        }
+      },
+      "CategoriaDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          }
+        }
+      },
+      "VacanteDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "destacado": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "descripcion": {
+            "type": "string"
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "imagen": {
+            "type": "string"
+          },
+          "detalles": {
+            "type": "string"
+          },
+          "estatus": {
+            "type": "string",
+            "enum": [
+              "CREATED",
+              "PROCESED",
+              "DELETED"
+            ]
+          },
+          "categoria": {
+            "$ref": "#/components/schemas/CategoriaDto"
+          }
+        }
+      },
+      "UsuarioRequest": {
+        "required": [
+          "email",
+          "nombre",
+          "password",
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "maxLength": 20,
+            "minLength": 6,
+            "type": "string"
+          },
+          "nombre": {
+            "maxLength": 15,
+            "minLength": 1,
+            "type": "string"
+          },
+          "username": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "estatus": {
+            "type": "string",
+            "enum": [
+              "CREATED",
+              "PROCESED",
+              "DELETED"
+            ]
+          }
+        }
+      },
+      "UsuarioDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "email": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          },
+          "estatus": {
+            "type": "string",
+            "enum": [
+              "CREATED",
+              "PROCESED",
+              "DELETED"
+            ]
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "PerfilRequest": {
+        "required": [
+          "perfil"
+        ],
+        "type": "object",
+        "properties": {
+          "perfil": {
+            "maxLength": 20,
+            "minLength": 1,
+            "type": "string"
+          }
+        }
+      },
+      "PerfilDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "perfil": {
+            "type": "string"
+          }
+        }
+      },
+      "InscripcionRequest": {
+        "required": [
+          "fechaInscripcion",
+          "usuarioId",
+          "vacanteId"
+        ],
+        "type": "object",
+        "properties": {
+          "vacanteId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "usuarioId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "fechaInscripcion": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "InscripcionDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "vacante": {
+            "$ref": "#/components/schemas/VacanteDto"
+          },
+          "usuario": {
+            "$ref": "#/components/schemas/UsuarioDto"
+          },
+          "fechaInscripcion": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "CategoriaRequest": {
+        "required": [
+          "descripcion",
+          "nombre"
+        ],
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "maxLength": 15,
+            "minLength": 1,
+            "type": "string"
+          },
+          "descripcion": {
+            "maxLength": 50,
+            "minLength": 5,
+            "type": "string"
+          }
+        }
+      },
+      "JwtResponse": {
+        "type": "object",
+        "properties": {
+          "jwttoken": {
+            "type": "string"
+          }
+        }
+      },
+      "PageVacanteDto": {
+        "type": "object",
+        "properties": {
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalElements": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "content": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VacanteDto"
+            }
+          },
+          "number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sort": {
+            "$ref": "#/components/schemas/SortObject"
+          },
+          "pageable": {
+            "$ref": "#/components/schemas/PageableObject"
+          },
+          "numberOfElements": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "first": {
+            "type": "boolean"
+          },
+          "last": {
+            "type": "boolean"
+          },
+          "empty": {
+            "type": "boolean"
+          }
+        }
+      },
+      "PageableObject": {
+        "type": "object",
+        "properties": {
+          "offset": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sort": {
+            "$ref": "#/components/schemas/SortObject"
+          },
+          "paged": {
+            "type": "boolean"
+          },
+          "unpaged": {
+            "type": "boolean"
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "SortObject": {
+        "type": "object",
+        "properties": {
+          "empty": {
+            "type": "boolean"
+          },
+          "sorted": {
+            "type": "boolean"
+          },
+          "unsorted": {
+            "type": "boolean"
+          }
+        }
+      },
+      "PageUsuarioDto": {
+        "type": "object",
+        "properties": {
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalElements": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "content": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UsuarioDto"
+            }
+          },
+          "number": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sort": {
+            "$ref": "#/components/schemas/SortObject"
+          },
+          "pageable": {
+            "$ref": "#/components/schemas/PageableObject"
+          },
+          "numberOfElements": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "first": {
+            "type": "boolean"
+          },
+          "last": {
+            "type": "boolean"
+          },
+          "empty": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Languages": {
+        "type": "object",
+        "properties": {
+          "en": {
+            "type": "string"
+          },
+          "se": {
+            "type": "string"
+          },
+          "no": {
+            "type": "string"
+          }
+        }
+      },
+      "Laureate": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "knownName": {
+            "$ref": "#/components/schemas/Languages"
+          },
+          "fullName": {
+            "$ref": "#/components/schemas/Languages"
+          },
+          "portion": {
+            "type": "string"
+          },
+          "sortOrder": {
+            "type": "string"
+          },
+          "motivation": {
+            "$ref": "#/components/schemas/Languages"
+          },
+          "links": {
+            "$ref": "#/components/schemas/Links"
+          }
+        }
+      },
+      "Links": {
+        "type": "object",
+        "properties": {
+          "rel": {
+            "type": "string"
+          },
+          "href": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          },
+          "types": {
+            "type": "string"
+          }
+        }
+      },
+      "Meta": {
+        "type": "object",
+        "properties": {
+          "terms": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "disclaimer": {
+            "type": "string"
+          }
+        }
+      },
+      "NobelPrizeDto": {
+        "type": "object",
+        "properties": {
+          "awardYear": {
+            "type": "string"
+          },
+          "category": {
+            "$ref": "#/components/schemas/Languages"
+          },
+          "categoryFullName": {
+            "$ref": "#/components/schemas/Languages"
+          },
+          "prizeAmount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prizeAmountAdjusted": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "links": {
+            "$ref": "#/components/schemas/Links"
+          },
+          "laureates": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Laureate"
+            }
+          },
+          "meta": {
+            "$ref": "#/components/schemas/Meta"
+          },
+          "dateAwarded": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuthentication": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

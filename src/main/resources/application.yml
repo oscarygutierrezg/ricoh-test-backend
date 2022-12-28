@@ -2,6 +2,7 @@ app:
  ms:
   nobel:
    url: https://api.nobelprize.org/2.1
+   min-year: 1901
 server:
  servlet:
   context-path: /ricoh

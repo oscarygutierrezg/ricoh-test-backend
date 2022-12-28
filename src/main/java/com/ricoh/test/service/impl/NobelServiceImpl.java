@@ -3,28 +3,33 @@ package com.ricoh.test.service.impl;
 import com.ricoh.test.client.NobelClient;
 import com.ricoh.test.dto.external.nobel.NobelPrizeDto;
 import com.ricoh.test.exceptions.YearException;
+import com.ricoh.test.model.enums.NobelCategory;
 import com.ricoh.test.service.NobelService;
-import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor
 public class NobelServiceImpl implements NobelService {
 
+    @Value("${app.ms.nobel.min-year}")
+    private int minYear;
     private final NobelClient nobelClient;
 
+    public NobelServiceImpl(NobelClient nobelClient) {
+        this.nobelClient = nobelClient;
+    }
+
     @Override
-    public List<NobelPrizeDto> getNobelInfo(String category, int yearFrom, int yearTo) {
+    public List<NobelPrizeDto> getNobelInfo(NobelCategory category, int yearFrom, int yearTo) {
+        if(yearFrom <  minYear){
+            throw new YearException("yearFrom no puede ser menor a "+minYear);
+        }
         if(yearTo < yearFrom ){
             throw new YearException("yearFrom no puede ser mayor a yearTo");
         }
@@ -32,7 +37,7 @@ public class NobelServiceImpl implements NobelService {
         List<CompletableFuture<List<NobelPrizeDto>>> completableFutures = new ArrayList<>(); //List to hold all the completable futures
 
         for (int i = yearFrom; i <= yearTo; i++) {
-            completableFutures.add(getNobelInfo(category, i));
+            completableFutures.add(getNobelInfo(category.toString(), i));
         }
 
         List<List<NobelPrizeDto>> list= completableFutures.stream()
