@@ -16,7 +16,7 @@ public class NobelApiMock extends WireMockServer {
     public void startMockServer() {
         start();
         stubFor(
-                WireMock.get(WireMock.urlPathMatching("/nobelPrize/category/2022"))
+                WireMock.get(WireMock.urlPathMatching("/nobelPrize/che/2022"))
                         .willReturn(
                                 WireMock.aResponse()
                                         .withStatus(HttpStatus.OK.value())

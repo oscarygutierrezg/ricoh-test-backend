@@ -84,7 +84,7 @@ public class NobelControllerTest {
 	public void test_GetNobelInfo_Should_ShowListNobelInfo_When_Invoked() throws Exception {
 
 		ResultActions res = mockMvc.perform(
-						MockMvcRequestBuilders.get("/external/v1/nobel/category/2022/2022")
+						MockMvcRequestBuilders.get("/external/v1/nobel/che/2022/2022")
 								.contentType(MediaType.APPLICATION_JSON)
 								.accept(MediaType.APPLICATION_JSON)
 								.header(AUTHORIZATION, "Bearer "+token)
