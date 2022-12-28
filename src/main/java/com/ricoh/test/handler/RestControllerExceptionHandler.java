@@ -2,6 +2,7 @@ package com.ricoh.test.handler;
 
 import com.ricoh.test.dto.ApiResponseErrorDto;
 import com.ricoh.test.exceptions.InscripcionAlreadyExistException;
+import com.ricoh.test.exceptions.YearException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,6 +37,17 @@ public class RestControllerExceptionHandler {
 		return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY)
 				.body(
 						createApiResponseErrorDto(HttpStatus.UNPROCESSABLE_ENTITY, Arrays.asList(exception.getMessage()))
+				);
+
+	}
+
+	@ExceptionHandler(YearException.class)
+	@ResponseStatus(HttpStatus.BAD_REQUEST)
+	public ResponseEntity<ApiResponseErrorDto> handleYearException(YearException exception){
+		log.error(exception.getMessage(),exception);
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+				.body(
+						createApiResponseErrorDto(HttpStatus.BAD_REQUEST, Arrays.asList(exception.getMessage()))
 				);
 
 	}

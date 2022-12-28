@@ -28,11 +28,12 @@ public class NobelController {
 	private NobelService nobelService;
 
 
-	@GetMapping(value = "/{category}/{year}")
+	@GetMapping(value = "/{category}/{yearFrom}/{yearTo}")
 	public ResponseEntity<List<NobelPrizeDto>>  getNobelInfo(
 			@PathVariable(value = "category") String category,
-			@PathVariable(value = "year") int year
+			@PathVariable(value = "yearFrom") int yearFrom,
+			@PathVariable(value = "yearTo") int yearTo
 	) {
-		return  ResponseEntity.ok().body(nobelService.getNobelInfo(category, year));
+		return  ResponseEntity.ok().body(nobelService.getNobelInfo(category, yearFrom, yearTo));
 	}
 }

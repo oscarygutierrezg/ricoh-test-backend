@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface NobelService {
 
-	List<NobelPrizeDto> getNobelInfo(String category, int year);
+	List<NobelPrizeDto> getNobelInfo(String category, int yearFrom, int yearTo);
 }
