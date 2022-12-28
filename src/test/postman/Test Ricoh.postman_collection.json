@@ -1566,7 +1566,7 @@
 			"name": "Nobel",
 			"item": [
 				{
-					"name": "show",
+					"name": "Nobel Info",
 					"event": [
 						{
 							"listen": "test",
@@ -1592,7 +1592,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/ricoh/external/v1/nobel/Literature/1901",
+							"raw": "http://localhost:8080/ricoh/external/v1/nobel/che/1900/1901",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1603,7 +1603,8 @@
 								"external",
 								"v1",
 								"nobel",
-								"Literature",
+								"che",
+								"1900",
 								"1901"
 							]
 						}
