@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -27,8 +28,12 @@ public class NobelServiceImpl implements NobelService {
 
     @Override
     public List<NobelPrizeDto> getNobelInfo(NobelCategory category, int yearFrom, int yearTo) {
+        var currentYear =  LocalDateTime.now().getYear();
         if(yearFrom <  minYear){
             throw new YearException("yearFrom no puede ser menor a "+minYear);
+        }
+        if(yearTo > currentYear){
+            throw new YearException("yearTo no puede ser mayor  a "+currentYear);
         }
         if(yearTo < yearFrom ){
             throw new YearException("yearFrom no puede ser mayor a yearTo");

@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import jakarta.persistence.EntityNotFoundException;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -26,7 +28,7 @@ public class RestControllerExceptionHandler {
 	public ResponseEntity<ApiResponseErrorDto> handleEntityNotFoundException(EntityNotFoundException exception){
 		return ResponseEntity.status(HttpStatus.NOT_FOUND)
 				.body(
-						createApiResponseErrorDto(HttpStatus.NOT_FOUND, Arrays.asList(exception.getMessage()))
+						createApiResponseErrorDto(HttpStatus.NOT_FOUND, List.of(exception.getMessage()))
 						);
 
 	}
@@ -36,7 +38,7 @@ public class RestControllerExceptionHandler {
 	public ResponseEntity<ApiResponseErrorDto> handleEntityNotFoundException(InscripcionAlreadyExistException exception){
 		return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY)
 				.body(
-						createApiResponseErrorDto(HttpStatus.UNPROCESSABLE_ENTITY, Arrays.asList(exception.getMessage()))
+						createApiResponseErrorDto(HttpStatus.UNPROCESSABLE_ENTITY, List.of(exception.getMessage()))
 				);
 
 	}
@@ -47,8 +49,21 @@ public class RestControllerExceptionHandler {
 		log.error(exception.getMessage(),exception);
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST)
 				.body(
-						createApiResponseErrorDto(HttpStatus.BAD_REQUEST, Arrays.asList(exception.getMessage()))
+						createApiResponseErrorDto(HttpStatus.BAD_REQUEST, List.of(exception.getMessage()))
 				);
+
+	}
+
+	@ExceptionHandler(MethodArgumentTypeMismatchException.class)
+	@ResponseStatus(HttpStatus.BAD_REQUEST)
+	public ResponseEntity<ApiResponseErrorDto> handleMethodArgumentTypeMismatchException(MethodArgumentTypeMismatchException exception){
+		log.error(exception.getMessage(),exception);
+		var body = createApiResponseErrorDto(HttpStatus.BAD_REQUEST, List.of(exception.getMessage()));
+		if(exception.getMessage().lastIndexOf("NobelCategory")!=-1)
+			body = createApiResponseErrorDto(HttpStatus.BAD_REQUEST, List.of("category debe estar entre estos valores: che, eco, lit, pea, phy, med"));
+
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+				.body(body);
 
 	}
 
@@ -72,7 +87,7 @@ public class RestControllerExceptionHandler {
 		log.error(exception.getMessage(),exception);
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
 				.body(
-						createApiResponseErrorDto(HttpStatus.INTERNAL_SERVER_ERROR, Arrays.asList(exception.getMessage()))
+						createApiResponseErrorDto(HttpStatus.INTERNAL_SERVER_ERROR, List.of(exception.getMessage()))
 						);
 
 	}
