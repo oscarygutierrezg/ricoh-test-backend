@@ -1578,6 +1578,9 @@
 							}
 						}
 					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -1591,8 +1594,17 @@
 						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:8080/ricoh/external/v1/nobel/che/1900/1901",
+							"raw": "http://localhost:8080/ricoh/external/v1/nobel/che/1901/1901",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1604,7 +1616,7 @@
 								"v1",
 								"nobel",
 								"che",
-								"1900",
+								"1901",
 								"1901"
 							]
 						}

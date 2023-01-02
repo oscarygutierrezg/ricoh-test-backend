@@ -34,8 +34,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -54,8 +54,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -113,8 +113,8 @@
           "required": true
         },
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -133,8 +133,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -182,8 +182,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -202,8 +202,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -253,8 +253,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -273,8 +273,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -332,8 +332,8 @@
           "required": true
         },
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -352,8 +352,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -401,8 +401,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -421,8 +421,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -472,8 +472,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -492,8 +492,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -551,8 +551,8 @@
           "required": true
         },
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -571,8 +571,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -620,8 +620,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -640,8 +640,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -691,8 +691,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -711,8 +711,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -770,8 +770,8 @@
           "required": true
         },
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -790,8 +790,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -839,8 +839,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -859,8 +859,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -910,8 +910,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -930,8 +930,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -989,8 +989,8 @@
           "required": true
         },
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -1009,8 +1009,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -1058,8 +1058,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -1078,8 +1078,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -1185,8 +1185,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -1205,8 +1205,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -1253,8 +1253,8 @@
           "required": true
         },
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -1273,8 +1273,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -1323,8 +1323,8 @@
           "required": true
         },
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -1343,8 +1343,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -1393,8 +1393,8 @@
           "required": true
         },
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -1413,8 +1413,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -1463,8 +1463,8 @@
           "required": true
         },
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -1483,8 +1483,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -1533,8 +1533,8 @@
           "required": true
         },
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -1553,8 +1553,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -1603,8 +1603,8 @@
           "required": true
         },
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -1623,8 +1623,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -1663,8 +1663,8 @@
         ],
         "operationId": "getAllVacantes_1",
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -1683,8 +1683,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -1785,8 +1785,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -1805,8 +1805,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -1845,8 +1845,8 @@
         ],
         "operationId": "getAllUsuarios_1",
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -1865,8 +1865,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -1908,8 +1908,8 @@
         ],
         "operationId": "getAllPerfils",
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -1928,8 +1928,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -1982,8 +1982,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -2002,8 +2002,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -2056,8 +2056,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -2076,8 +2076,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -2119,8 +2119,8 @@
         ],
         "operationId": "getAllInscripcions",
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -2139,8 +2139,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -2182,8 +2182,8 @@
         ],
         "operationId": "getAllCategorias",
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -2202,8 +2202,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -2281,8 +2281,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "*/*": {
                 "schema": {
@@ -2301,8 +2301,8 @@
               }
             }
           },
-          "400": {
-            "description": "Bad Request",
+          "404": {
+            "description": "Not Found",
             "content": {
               "*/*": {
                 "schema": {
@@ -2787,6 +2787,9 @@
           "portion": {
             "type": "string"
           },
+          "contribution": {
+            "type": "string"
+          },
           "sortOrder": {
             "type": "string"
           },
@@ -2832,6 +2835,10 @@
       "NobelPrizeDto": {
         "type": "object",
         "properties": {
+          "index": {
+            "type": "string",
+            "format": "uuid"
+          },
           "awardYear": {
             "type": "string"
           },
