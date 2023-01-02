@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
@@ -48,9 +49,22 @@ public class NobelServiceImpl implements NobelService {
         List<List<NobelPrizeDto>> list= completableFutures.stream()
                 .map(CompletableFuture::join)
                 .collect(Collectors.toList());
-        return list.stream()
-                        .flatMap(List::stream)
-                        .collect(Collectors.toList());
+        var flatList = list.stream()
+                .flatMap(List::stream)
+                .collect(Collectors.toList());
+        flatList.forEach(f -> {
+            f.setIndex(UUID.randomUUID());
+            if(f.laureates != null){
+                f.laureates.forEach(l -> {
+                    String [] split = l.getPortion().split("/");
+                    Double contribution = (Double.parseDouble(split[0])/
+                            Double.parseDouble(split[1])) *100;
+                    l.setContribution(contribution+" %");
+                });
+
+            }
+        });
+        return flatList;
     }
 
     @Async

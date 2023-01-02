@@ -4,10 +4,12 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 @Getter
 @Setter
 public class NobelPrizeDto {
+    public UUID index;
     public String awardYear;
     public Languages category;
     public Languages categoryFullName;

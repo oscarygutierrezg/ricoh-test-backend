@@ -1,6 +1,7 @@
 package com.ricoh.test.reposiroty;
 
 
+import java.util.Optional;
 import java.util.UUID;
 
 import com.ricoh.test.model.Usuario;
@@ -10,5 +11,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, UUID> {
 
-	Usuario findByUsername(String username);
+	Optional<Usuario> findByUsername(String username);
 }

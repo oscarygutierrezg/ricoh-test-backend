@@ -11,6 +11,7 @@ public class Laureate {
     private Languages knownName;
     private Languages fullName;
     private String portion;
+    private String contribution;
     private String sortOrder;
     private Languages motivation;
     private Links links;
