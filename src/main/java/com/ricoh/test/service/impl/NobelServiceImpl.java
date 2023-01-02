@@ -56,10 +56,16 @@ public class NobelServiceImpl implements NobelService {
             f.setIndex(UUID.randomUUID());
             if(f.laureates != null){
                 f.laureates.forEach(l -> {
-                    String [] split = l.getPortion().split("/");
-                    Double contribution = (Double.parseDouble(split[0])/
-                            Double.parseDouble(split[1])) *100;
-                    l.setContribution(contribution+" %");
+                    if(l.getPortion().compareTo("1")==0){
+                        l.setContribution("100 %");
+                    }
+                    else{
+                        String [] split = l.getPortion().split("/");
+                        Double contribution = (Double.parseDouble(split[0])/
+                                Double.parseDouble(split[1])) *100;
+                        l.setContribution(contribution+" %");
+                    }
+
                 });
 
             }
